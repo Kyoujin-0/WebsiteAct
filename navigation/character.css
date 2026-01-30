@@ -1,0 +1,334 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #4e4e4e, #000000);
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logoimg {
+            height: 9vh;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        .nav-links a.active {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 20px;
+            border-radius: 20px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            gap: 50px;
+            max-width: 100vw;
+            margin: 0 auto;
+            height: calc(100vh - 80px);
+            align-items: center;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-item:hover {
+            opacity: 0.8;
+        }
+
+        /* Character profile image container */
+        .character-profile {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .character-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        /* Center Content */
+        .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    /* max-width: 900px; */   /* remove or increase */
+}
+
+
+
+        .character-name {
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #ffffff, #898989);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            width: 100%;
+            position: absolute;
+            bottom: 12vh;
+            left: 2vw;
+        }
+
+        .character-title {
+            text-align: center;
+            font-size: 16px;
+            color: rgb(0, 174, 255);
+            letter-spacing: 3px;
+            margin-top: 5px;
+            width: 100%;
+            position: absolute;
+            bottom: 10vh;
+            left: 2vw;
+        }
+
+        /* Additional Info Section */
+        .character-info {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 20px;
+            max-width: 600px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            bottom: 7vh;
+            left: 30vw;
+        }
+
+        .character-description {
+            font-size: 13px;
+            line-height: 1.6;
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.5px;
+            text-align: center;
+            position: absolute;
+        }
+
+        /* Character Content Switching */
+        .character-content {
+            display: none;
+        }
+
+        /* Show content when corresponding radio is checked */
+        #char1:checked ~ .main-content .char1-content,
+        #char2:checked ~ .main-content .char2-content,
+        #char3:checked ~ .main-content .char3-content,
+        #char4:checked ~ .main-content .char4-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Update sidebar active states */
+        #char1:checked ~ .sidebar label[for="char1"] .character-profile,
+        #char2:checked ~ .sidebar label[for="char2"] .character-profile,
+        #char3:checked ~ .sidebar label[for="char3"] .character-profile,
+        #char4:checked ~ .sidebar label[for="char4"] .character-profile {
+            border-color: #d4af37;
+            border-width: 4px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            transform: scale(1.1);
+        }
+
+        #char1:checked ~ .sidebar label[for="char1"] .sidebar-label,
+        #char2:checked ~ .sidebar label[for="char2"] .sidebar-label,
+        #char3:checked ~ .sidebar label[for="char3"] .sidebar-label,
+        #char4:checked ~ .sidebar label[for="char4"] .sidebar-label {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        #char1:checked ~ .sidebar label[for="char1"],
+        #char2:checked ~ .sidebar label[for="char2"],
+        #char3:checked ~ .sidebar label[for="char3"],
+        #char4:checked ~ .sidebar label[for="char4"] {
+            opacity: 1;
+        }
+
+
+        .character-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: all 0.5s ease;
+        }
+
+        .character-image-container:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Decorative Elements */
+        .decorative-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .decorative-lines::before,
+        .decorative-lines::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #d4af37, transparent);
+        }
+
+        .decorative-lines::before {
+            left: 15%;
+        }
+
+        .decorative-lines::after {
+            right: 15%;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+                height: calc(100vh - 70px);
+            }
+
+            .sidebar {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                overflow-x: auto;
+                gap: 15px;
+            }
+
+            .character-name {
+                font-size: 40px;
+            }
+
+            .character-symbol {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .character-name {
+                font-size: 32px;
+            }
+
+            .character-symbol {
+                width: 220px;
+                height: 220px;
+            }
+
+            .character-profile {
+                width: 60px;
+                height: 60px;
+            }
+        }

@@ -538,7 +538,7 @@ body::before {
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 758px) {
   #download {
     flex-direction: column;
     gap: 1rem;

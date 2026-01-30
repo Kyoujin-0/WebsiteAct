@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+</head>
+    <link rel="stylesheet" href="navigation/character.css">
+<body>
+    <div class="decorative-lines"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><img id="logoimg" src="media/Honkai Impact logo.png"></div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#" class="active">CHARACTERS</a></li>
+            <li><a href="#">LORE</a></li>
+            <li><a href="#">REGIONS</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="nav-button">English ▼</button>
+            <button class="nav-button">⏸</button>
+            <button class="nav-button">👤</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hidden Radio Buttons for Character Selection -->
+        <input type="radio" id="char1" name="character" value="char1" checked style="display: none;">
+        <input type="radio" id="char2" name="character" value="char2" style="display: none;">
+        <input type="radio" id="char3" name="character" value="char3" style="display: none;">
+        <input type="radio" id="char4" name="character" value="char4" style="display: none;">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <label class="sidebar-item" for="char1">
+                <div class="character-profile">
+                    <img src="media/d7534fa20e139e8db056f4a41015ebe0.jpg" alt="Character 1">
+                </div>
+                <span class="sidebar-label">Raiden</span>
+            </label>
+            <label class="sidebar-item" for="char2">
+                <div class="character-profile">
+                    <img src="media/89ccd9b14eeec266817470b59fa2cd38.jpg" alt="Character 2">
+                </div>
+                <span class="sidebar-label">Kiana</span>
+            </label>
+            <label class="sidebar-item" for="char3">
+                <div class="character-profile">
+                    <img src="media/71a001f0240762a663b21d6820e38533.jpg" alt="Character 3">
+                </div>
+                <span class="sidebar-label">Luna</span>
+            </label>
+            <label class="sidebar-item" for="char4">
+                <div class="character-profile">
+                    <img src="media/0bbfad10c67e559963b465e4a3f03e5f.jpg" alt="Character 4">
+                </div>
+                <span class="sidebar-label">Seele</span>
+            </label>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Character 1 Content -->
+            <div class="character-content char1-content">
+                <!-- Character Image -->
+                <div class="character-image-container">
+                    <img src="media/Raiden Shogun.png" alt="Raiden">
+                </div>
+
+                <!-- Character Name -->
+                <h1 class="character-name">RAIDEN SHOGUN</h1>
+                <p class="character-title">Electro Archon</p>
+
+                <!-- Additional Character Info -->
+                <div class="character-info">
+                    <p class="character-description">
+                        The thunder incarnate, the exalted ruler of Inazuma. 
+                        With lightning at her disposal, she commits herself to the solitary pursuit of eternity
+                    </p>
+                </div>
+            </div>
+
+            <!-- Character 2 Content -->
+            <div class="character-content char2-content">
+                <!-- Character Image -->
+                <div class="character-image-container">
+                    <img src="media/1101074 (1).png" alt="Yinlin">
+                </div>
+
+                <!-- Character Name -->
+                <h1 class="character-name">KIANA KASLANA</h1>
+                <p class="character-title">Herrscher of Finality</p>
+
+                <!-- Additional Character Info -->
+                <div class="character-info">
+                    <p class="character-description">
+                        A genetically engineered clone created using the original Kiana Kaslana. Her existence ties directly to humanity's attempts to control the power of a God.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Character 3 Content -->
+            <div class="character-content char3-content">
+                <!-- Character Image -->
+                <div class="character-image-container">
+                    <img src="media/f05720dc479d2c9d644d7a5d815517ee_4415618745124171210 (1).png" alt="Baizhi">
+                </div>
+
+                <!-- Character Name -->
+                <h1 class="character-name">Lunar Vow</h1>
+                <p class="character-title">Crimson love</p>
+
+                <!-- Additional Character Info -->
+                <div class="character-info">
+                    <p class="character-description">
+                       A being who remained alone for thousands of years, reawakening with power untouched by the passage of time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Character 4 Content -->
+            <div class="character-content char4-content">
+                <!-- Character Image -->
+                <div class="character-image-container">
+                    <img src="media/2021052011140998208 (1).png" alt="Jinhsi">
+                </div>
+
+                <!-- Character Name -->
+                <h1 class="character-name">Seele Vollerei</h1>
+                <p class="character-title">Stygian Nymph</p>
+
+                <!-- Additional Character Info -->
+                <div class="character-info">
+                    <p class="character-description">
+                        A girl shaped by experimentation of stigmata, sharing her body with a second, far more dangerous consciousness.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
